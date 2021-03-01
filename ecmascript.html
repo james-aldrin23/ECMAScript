@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+      //  testFunction(); //function hoisting only use for standard syntax 
+     //testVar(); it will not run
+        function testFunction() {
+            console.log("this is a start function");
+
+        }
+        //x     console.log(testFunction());
+
+        var testVar = function (a,b) {
+
+            //console.log("this is a anonymous");
+            return a+b;
+        }
+        //console.log(testVar());
+        var testVar2 = function addNumbers(a,...args) { //... its mean spread operators
+          //  console.log(typeof(args)); //object
+       //   console.log(typeof([1,2,3]));
+         // console.log(args[0]);
+         //   console.log("Its a function exrepresssion");
+            return a+args[0];
+
+
+        }
+        //  console.log(testVar2 ());
+
+        var testVar3 = () => {
+
+            console.log("this is an arrow function");
+            return 3;
+        }
+       //console.log(testVar2(100,200,250,300,350,400,450,500));
+        var testVar4 = new Function('a','b',"return a*b")
+        console.log(testVar4(100,5));
+
+
+
+
+
+    </script>
+</body>
+
+</html>
